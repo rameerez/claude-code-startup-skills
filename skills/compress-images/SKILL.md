@@ -1,35 +1,30 @@
 ---
 name: compress-images
 description: Compress images for web/SEO performance using cwebp. Use when optimizing images for faster page loads, reducing file sizes, or converting JPG/PNG to WebP format.
-argument-hint: "[directory or file path]"
+argument-hint: "[directory]"
+allowed-tools: Bash(cwebp:*), Bash(ls:*), Bash(mkdir:*), Bash(mv:*)
 ---
 
 # Image Compression Skill
 
-Compress images to WebP format optimized for SEO performance (target: under 100KB per image).
+Compress all images in `$ARGUMENTS` (or `app/assets/images/content/` if no path provided) to WebP format, optimized for SEO performance (target: under 100KB per image).
 
 ## Process
 
-1. **Create originals folder** - Move source files to `originals/` subfolder for reference
-2. **List images** in the specified directory (default: `app/assets/images/content/`)
-3. **For each image** (JPG, PNG, GIF):
-   - Start with quality 70, resize to max 1200px width
-   - Check resulting size
-   - If over 100KB, iteratively reduce quality until target is met
-   - Save as `.webp` with same base name in parent directory
+1. **Create originals folder** - Create `originals/` subfolder inside the target directory and move source files there. Never destroy source files.
+2. **Compress each image** (JPG, PNG, GIF) from `originals/` to the parent directory as `.webp`
+3. **Iterate until all images are under 100KB** - check sizes after each pass, re-compress any that exceed the target
 4. **Report results** with before/after sizes
 5. **Update references** in content files from old extensions to `.webp`
 
 ## File Structure
 
-Keep originals for reference - never destroy source files:
-
 ```
-app/assets/images/content/
-├── originals/           # High-quality source files (not served)
+target-directory/
+├── originals/           # High-quality source files preserved here
 │   ├── hero.jpg
 │   └── feature.png
-├── hero.webp            # Compressed, web-optimized (served)
+├── hero.webp            # Compressed, web-optimized
 └── feature.webp
 ```
 
@@ -83,11 +78,6 @@ From actual compression run on content images:
 3. **Very large images** (700KB+) may need both lower quality AND smaller dimensions
 4. **Keyboard/tech photos** with fine detail are hardest to compress - expect 4-5 passes
 5. **Soft/blurry images** compress much better than sharp detailed ones
-
-## Arguments
-
-- `$ARGUMENTS` - Path to image file or directory containing images
-- If no path provided, default to `app/assets/images/content/`
 
 ## After Compression
 
