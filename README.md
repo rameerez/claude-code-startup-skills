@@ -1,14 +1,14 @@
-# Claude Code Startup Skills
+# 🚀 Startup skills for Claude Code
 
-A collection of practical [Claude Code](https://claude.ai/code) skills for building and running software startups and businesses.
+A collection of [Claude Code](https://claude.ai/code) skills for building and running software startups, SaaS, apps, and businesses.
 
-These are reusable slash commands that automate common tasks in startup development workflows.
+These are reusable commands that automate common business-oriented tasks in startup development workflows.
 
 ## Skills
 
 | Skill | Description |
 |-------|-------------|
-| [`compress-images`](skills/compress-images/) | Compress images to WebP for SEO-optimal page performance |
+| [`compress-images`](skills/compress-images/) | Compress images to WebP for SEO-optimized page performance |
 
 ## Installation
 
