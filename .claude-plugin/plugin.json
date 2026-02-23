@@ -1,0 +1,12 @@
+{
+  "name": "startup-skills",
+  "version": "1.0.0",
+  "description": "Claude Code skills for building startups, SaaS, and software businesses",
+  "author": {
+    "name": "rameerez",
+    "url": "https://github.com/rameerez"
+  },
+  "repository": "https://github.com/rameerez/claude-code-startup-skills",
+  "license": "MIT",
+  "keywords": ["startup", "saas", "seo", "video", "images", "social-media"]
+}
