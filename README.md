@@ -9,6 +9,7 @@ These are reusable commands that automate common business-oriented tasks in star
 | Skill | Description |
 |-------|-------------|
 | [`compress-images`](skills/compress-images/) | Compress images to WebP for SEO-optimized page performance |
+| [`customer-empathy`](skills/customer-empathy/) | Deep-dive into customer empathy and user journey thinking |
 | [`download-video`](skills/download-video/) | Download videos from social media URLs (X, YouTube, TikTok, etc.) using yt-dlp |
 | [`transcribe-video`](skills/transcribe-video/) | Generate subtitles (SRT/VTT) and transcripts from video/audio files using AWS Transcribe |
 
