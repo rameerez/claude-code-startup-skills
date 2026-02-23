@@ -21,13 +21,13 @@ A [Claude Code](https://claude.ai/code) plugin with skills for building and runn
 claude plugin marketplace add rameerez/claude-code-startup-skills
 
 # Install the plugin (available across all projects)
-claude plugin install startup-skills@rameerez-claude-code-startup-skills
+claude plugin install startup@rameerez-claude-code-startup-skills
 ```
 
 Skills are namespaced when installed as a plugin:
 
 ```
-/startup-skills:compress-images ./path/to/images/
+/startup:compress-images ./path/to/images/
 ```
 
 ### Option 2: Symlink for personal use
